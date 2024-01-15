@@ -22,16 +22,7 @@ btn = document.getElementById("btn").addEventListener("click", () => {
 
     // Vérifie s'il reste des essais
     if (max > 0) {
-        // Fonction qui génère un tableau à partir d'un nombre
-        function generertab(num) {
-            let tab = [];
-            tab[0] = Math.floor(num / 1000);
-            tab[1] = Math.floor((num % 1000) / 100);
-            tab[2] = Math.floor((num % 100) / 10);
-            tab[3] = (num % 100) % 10;
-            return tab;
-        }
-
+      
         // Récupère la valeur du champ de saisie
         nb = document.getElementById("number").value;
 
@@ -100,4 +91,15 @@ document.getElementById("playAgain").addEventListener("click", () => {
 // Fonction pour activer le bouton "Play Again"
 function enablePlayAgainButton() {
     document.getElementById("playAgain").style.display = "block";
+}
+
+
+  // Fonction qui génère un tableau à partir d'un nombre
+  function generertab(num) {
+    let tab = [];
+    tab[0] = Math.floor(num / 1000);
+    tab[1] = Math.floor((num % 1000) / 100);
+    tab[2] = Math.floor((num % 100) / 10);
+    tab[3] = (num % 100) % 10;
+    return tab;
 }
